@@ -18,7 +18,7 @@ Example
 
 Assuming that you have folder structure like this 
 
-![Folder structure]("https://github.com/chaliy/aspnet-underscore-bundler/blob/master/docs/bundlefoldertructure.png?raw=true")
+![Folder structure](https://github.com/chaliy/aspnet-underscore-bundler/raw/master/docs/bundlefoldertructure.png)
 
 bundle configuration will be
 
