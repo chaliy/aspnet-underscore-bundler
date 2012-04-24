@@ -25,17 +25,17 @@ bundle configuration will be
     // Create app bundle: 
     //    main.html and example2.html are underscore templates
     //    app.js is our simple application
-    var cartJs = new Bundle("~/scripts/app.js");
+    var appJs = new Bundle("~/scripts/app.js");
     
-    cartJs.AddFile("~/scripts/app/main.html");
-    cartJs.AddFile("~/scripts/app/example2.html");      
-    cartJs.AddFile("~/scripts/app/app.js");
+    appJs.AddFile("~/scripts/app/main.html");
+    appJs.AddFile("~/scripts/app/example2.html");      
+    appJs.AddFile("~/scripts/app/app.js");
     
-    cartJs.Transform = new NoTransform("text/javascript; charset=utf-8");    
-    //cartJs.Transform = new JsMinify(); // You can minify bundle if you want
-    cartJs.Builder = new CompiledUndrescoreTemplatesBundler();
+    appJs.Transform = new NoTransform("text/javascript; charset=utf-8");    
+    //appJs.Transform = new JsMinify(); // You can minify bundle if you want
+    appJs.Builder = new CompiledUndrescoreTemplatesBundler();
     
-    BundleTable.Bundles.Add(cartJs);
+    BundleTable.Bundles.Add(appJs);
 
 Complete example is [SampleWebApp](https://github.com/chaliy/aspnet-underscore-bundler/tree/master/src/SampleWebApp) project in sources.
 
