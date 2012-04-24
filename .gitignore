@@ -14,3 +14,4 @@ TestResult.xml
 packages
 *.ncrunchsolution
 *.ncrunchproject
+*.crunchsolution.cache
