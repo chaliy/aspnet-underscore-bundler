@@ -44,7 +44,7 @@ Installation
 	
 <div class="nuget-badge">
     <p><code>PM&gt; Install-Package UnderscoreBundler -Pre</code></p>
-</div>]
+</div>
 	
 License
 =======
