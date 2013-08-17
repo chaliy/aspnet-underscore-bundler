@@ -1,9 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-
 namespace UnderscoreBundler
-{    
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Text.RegularExpressions;
+
     /// <summary>
     /// Line by line port of the Underscore's template method.
     /// </summary>
@@ -127,29 +127,5 @@ namespace UnderscoreBundler
                      source + "return __p;\n";
             return source;
         }        
-    }
-
-    static class StringEx
-    {
-        public static string Replace(this string @this, Regex match, Func<string, string> evaluator)
-        {
-            return match.Replace(@this, m => evaluator(m.Value));
-        }
-
-        public static string Replace(this string @this, Regex match, Func<string, string, string> evaluator)
-        {
-            return match.Replace(@this, m =>
-            {
-                switch (m.Groups.Count)
-                {
-                    case 2:
-                        return evaluator(m.Groups[0].Value, m.Groups[1].Value);
-                    case 1:
-                        return evaluator(m.Groups[0].Value, "");   
-                }
-
-                return evaluator("", "");
-            });
-        }
     }
 }

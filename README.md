@@ -1,17 +1,17 @@
 ASP.NET Underscore.js Templates Bundler
 ======================================
 
-Management of the templates for your javascript app could be pain. Of course, there are few [solutions](http://samarskyy.blogspot.com/2012/03/loading-external-jquery-template-files.html) [out](http://encosia.com/jquery-templates-composite-rendering-and-remote-loading/) [there](http://www.knockmeout.net/2011/03/using-external-jquery-template-files.html). This library is another solution :). Okay, sort of. Really this is just better implementation of [Anton Samarskyy's idea](http://samarskyy.blogspot.com/2012/03/loading-external-jquery-template-files.html).
+Management of the templates for your JavaScript app could be pain. Of course, there are few [solutions](http://samarskyy.blogspot.com/2012/03/loading-external-jquery-template-files.html) [out](http://encosia.com/jquery-templates-composite-rendering-and-remote-loading/) [there](http://www.knockmeout.net/2011/03/using-external-jquery-template-files.html). This library is another solution :). Okay, sort of. Really this is just better implementation of [Anton Samarskyy's idea](http://samarskyy.blogspot.com/2012/03/loading-external-jquery-template-files.html).
 
-So main idea of this library is about to keep templates as `HTML` files near of your `JS` files, but serve them as single file to reduce requests. What is more intersting is that we can go further precompile templates so we can serve templates as single `JS` file with our app scripts. Stay turned.
+So main idea of this library is about to keep templates as `HTML` files near of your `JS` files, but serve them as single file to reduce requests. What is more interesting is that we can go further and precompile templates so we can serve templates as single `js` file with our app scripts. Stay turned.
 
-Now about implmentation. `ASP.NET MVC 4` introduced [bunndling](http://msdn.microsoft.com/en-us/library/system.web.optimization.bundle.aspx) support. In simple words this is actually means combining (and minifying) many resource files (javascript, css) to the single file to reduce number of requests. This is what we actually use.
+Now about implementation. `ASP.NET MVC 4` introduced [bundling](http://msdn.microsoft.com/en-us/library/system.web.optimization.bundle.aspx) support. In simple words this is actually means combining (and minifying) many resource files (JavaScript, CSS) to the single file to reduce number of requests. This is what we actually use.
 
 Features
 ========
 
 1. Bundle HTML templates to the single file
-2. Precompile Underscore templates (ver 1.3.3)
+2. Precompile Underscore templates (ver 1.5.1)
 
 Example
 =======
@@ -43,7 +43,7 @@ Installation
 ============
 	
 <div class="nuget-badge">
-    <p><code>PM&gt; Install-Package UnderscoreBundler -Pre</code></p>
+    <p><code>PM&gt; Install-Package UnderscoreBundler</code></p>
 </div>
 	
 License

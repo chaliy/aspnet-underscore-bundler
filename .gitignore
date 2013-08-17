@@ -16,3 +16,4 @@ packages
 *.ncrunchproject
 *.crunchsolution.cache
 nuget.exe
+*.nupkg

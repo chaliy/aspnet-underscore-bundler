@@ -4,6 +4,8 @@ using UnderscoreBundler;
 
 namespace SampleWebApp
 {
+    using System.Diagnostics;
+
     public class Global : System.Web.HttpApplication
     {
 
@@ -11,20 +13,22 @@ namespace SampleWebApp
         {
             
             // Create frameworks bundle: JQuery and Underscore in our case
-            var coreJs = new Bundle("~/scripts/core.js", new JsMinify());            
-            //coreJs.AddDirectory("~/scripts/", "*.min.js");
+            var coreJs = new Bundle("~/core.js");
+            coreJs.IncludeDirectory("~/scripts/", "*.js");            
             BundleTable.Bundles.Add(coreJs);
+
+            Debugger.Launch();
 
             // Create app bundle: 
             //    main.html is underscore template
             //    app.js is our simple application
-            var appJs = new Bundle("~/scripts/app.js");
+            var appJs = new Bundle("~/app.js");
             
-            appJs.AddFile("~/scripts/app/main.html");
-            appJs.AddFile("~/scripts/app/example2.html");
-            appJs.AddFile("~/scripts/app/app.js");
+            appJs.Include("~/scripts/app/main.html");
+            appJs.Include("~/scripts/app/example2.html");
+            appJs.Include("~/scripts/app/app.js");
 
-            appJs.Transform = new NoTransform("text/javascript; charset=utf-8");
+            //appJs.Transforms.Add(new NoTransform("text/javascript; charset=utf-8"));
             // You can minify bundle if you want
             //cartJs.Transform = new JsMinify();
             appJs.Builder = new CompiledUndrescoreTemplatesBundler();
