@@ -15,3 +15,4 @@ packages
 *.ncrunchsolution
 *.ncrunchproject
 *.crunchsolution.cache
+nuget.exe

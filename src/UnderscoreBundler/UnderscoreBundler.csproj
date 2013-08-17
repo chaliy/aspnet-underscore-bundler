@@ -55,6 +55,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Scripts\underscore.min.map" />
     <None Include="UnderscoreBundler.nuspec" />
   </ItemGroup>
   <ItemGroup>
